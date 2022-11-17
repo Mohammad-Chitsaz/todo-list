@@ -1,0 +1,182 @@
+@import url('../assets/styles/font.css');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primaryColor: #6d28d9;
+  --secondaryColor: #ede9fe;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #7c7c7c;
+  --mainRed: #db2777;
+  --bodyColor: #f6f6f6;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'iranYekan';
+  padding: 0 1rem;
+  background-color: var(--bodyColor);
+}
+
+input,
+select,
+button {
+  outline: 0;
+  border: 0;
+  font-family: 'iranYekan';
+  background-color: #fff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  margin: 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-search {
+  flex-grow: 1;
+  display: flex;
+}
+
+.form .todo-input {
+  flex-grow: 1;
+  padding: 0 2rem 0 5rem;
+}
+
+.add-todo {
+  padding: 1rem;
+  cursor: pointer;
+  color: var(--mainWhite);
+  transition: all ease-in-out 0.3s;
+}
+.add-todo span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem 0.4rem;
+  border-radius: 50%;
+  background-color: var(--primaryColor);
+  transition: all ease-in-out 0.3s;
+  pointer-events: none;
+}
+
+.add-todo i {
+  pointer-events: none;
+}
+
+.add-todo:hover {
+  background-color: var(--primaryColor);
+}
+
+.add-todo:hover span {
+  color: var(--primaryColor);
+  background-color: var(--mainWhite);
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  padding: 1rem 0.5rem;
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+
+.form .select {
+  margin-right: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.triangle-down {
+  display: inline-block;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--primaryColor);
+  margin-left: 1rem;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  padding-left: 12.2rem;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0.5rem 0;
+  color: var(--primaryColor);
+  background-color: var(--secondaryColor);
+  transition: all 0.3s ease-in-out;
+}
+
+.todo .todo__title {
+  flex-grow: 1;
+  padding: 1rem;
+  padding-left: 5rem;
+  transition: 0.4s;
+  overflow: scroll;
+  background-color: transparent;
+}
+
+.todo .todo__title:not(:read-only) {
+  color: var(--mainRed);
+}
+
+.todo span {
+  cursor: pointer;
+  color: var(--primaryColor);
+}
+
+.todo i {
+  font-size: 2rem;
+  padding: 1.2rem;
+}
+
+.trash-icon i {
+  font-size: 1.8rem;
+  color: var(--mainRed);
+}
+
+.opacity {
+  opacity: 0.5;
+}
+
+.completed {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}

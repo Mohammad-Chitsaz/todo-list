@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- FavIcon -->
+    <link rel="shortcut icon" href="#" />
+  </head>
+  <body>
+    <header>
+      <h2>لیست انجام کارها</h2>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <form class="form">
+          <div class="todo-search">
+            <input
+              type="text"
+              class="todo-input"
+              id="todo-input"
+              autocomplete="off"
+            />
+            <button class="add-todo" id="add-todo">
+              <span>
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+          </div>
+
+          <div class="select">
+            <select id="filter-todos" name="todos">
+              <option value="all">همه</option>
+              <option value="completed">انجام شده ها</option>
+              <option value="uncompleted">انجام نشده ها</option>
+            </select>
+            <div class="triangle-down"></div>
+          </div>
+        </form>
+      </div>
+
+      <div class="todo-container">
+        <section class="todos" id="todos"></section>
+      </div>
+    </main>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
